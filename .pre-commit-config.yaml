@@ -1,5 +1,5 @@
 repos:
--   repo: https://github.com/rOOt-Rajat/Django-Ecommerce.git
+-   repo: https://github.com/rOOt-Rajat/Django-Ecommerce.git/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
     -   id: check-json
