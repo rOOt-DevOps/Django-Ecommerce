@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - uses: pre-commit/action@v2.0.3
+    - uses: pre-commit/action@v2.0.2
     - run: pip install virtualenv
     - run: make
     - name: self test newly built action
