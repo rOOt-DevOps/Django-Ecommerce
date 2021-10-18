@@ -1,0 +1,36 @@
+strictness: low
+test-warnings: true
+doc-warnings: false
+output-format: text
+
+ignore-patterns:
+  - .+/migrations/.+
+  - .+/settings/.+
+
+uses:
+  - django
+  - celery
+
+pep8:
+  disable:
+    - W602
+    - W603
+    - E101
+    - W191
+    - E117
+    - E305
+    - E741
+    - N815
+  enable:
+    - W601
+  options:
+    max-line-length: 120
+
+pylint:
+  run: false
+
+mccabe:
+  run: false
+
+dodgy:
+  run: false

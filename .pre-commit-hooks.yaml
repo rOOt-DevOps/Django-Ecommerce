@@ -1,11 +1,6 @@
--   id: check-added-large-files
-    name: Check for added large files
-    description: Prevent giant files from being committed
-    entry: check-added-large-files
+-   id: prospector
+    name: prospector
+    description: Analyze Python code using Prospector
+    entry: prospector
     language: python
--   id: check-json
-    name: Check JSON
-    description: This hook checks json files for parseable syntax.
-    entry: check-json
-    language: python
-    types: [json]
+    types: [python]
