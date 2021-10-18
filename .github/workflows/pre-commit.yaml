@@ -1,4 +1,4 @@
-name: pre-commit
+-name: pre-commit
 
 on:
   pull_request:
@@ -10,3 +10,5 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: pre-commit/action@v2.0.3
+    - name: Pre-commit autoupdate
+    - uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
