@@ -1,4 +1,4 @@
--name: pre-commit
+name: pre-commit
 
 on:
   pull_request:
@@ -7,8 +7,15 @@ on:
 
 jobs:
   pre-commit:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: pre-commit/action@v2.0.3
-    - name: Pre-commit autoupdate
-    - uses: browniebroke/pre-commit-autoupdate-action@v1.0.0
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+    - uses: pre-commit/action@v2.0.2
+    - run: pip install virtualenv
+    - run: make
+    - name: self test newly built action
+      uses: ./
+    - run: make push
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
