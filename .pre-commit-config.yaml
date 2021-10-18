@@ -1,5 +1,5 @@
 repos:
--   repo: https://github.com/rOOt-Rajat/Django-Ecommerce
+-   repo: https://github.com/rOOt-Rajat/Django-Ecommerce.git
     rev: 715af94fe5a08ab99d021bf25f804a39afae24d7 # The version of Prospector to use, at least 1.1.7
     hooks:
     -   id: prospector
